@@ -1,0 +1,940 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+/* Navigation Bar Styling*/ 
+
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .logo img{
+    height: 40px;
+  }
+
+  .menus ul{
+    list-style: none;
+    display: flex;
+    gap: 32px;
+  }
+
+  .menus ul li{
+    cursor: pointer;
+    color: rgb(17, 17, 17);
+    font-weight: 500;
+    transition: color 0.3;
+  }
+
+  .menus ul li:hover{
+    color: rgb(18, 179, 125);
+  }
+
+  .buttons{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+  }
+
+  .buttons .login{
+    background: transparent;
+    outline: none;
+    border: 2px solid rgb(18, 179, 125);
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: rgb(18, 179, 125);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .buttons .login:hover{
+    background-color: rgb(18, 179, 125);
+    color: white;
+  }
+
+  .buttons .get-started{
+    background-color: rgb(18, 179, 125);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .buttons .get-started:hover{
+    background-color: rgb(13, 107, 76);
+  }
+
+  .globe-icon img{
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+  }
+
+.globe-icon img:hover{
+  transform: scale(1.2);
+}
+
+}
+
+
+/* Hero section styling */
+
+.hero{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+
+  .H-img{
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+    z-index: -100;
+    position: relative;
+  }
+
+  .offer-container{
+    
+    z-index: 100;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    
+
+    .title{
+
+      text-align: center;
+      font-size: 40px;
+      font-weight: 700;
+      color: rgb(12, 187, 128);
+      margin-bottom: 40px;
+      position: relative;
+      text-align: center;
+    }
+
+    .sparkle{
+      display: inline-block;
+      font-size: 32px;
+      color: #ffd700;
+      margin-left: 10px;
+      animation: sparkle 2s ease-in-out infinite;
+      
+    }
+      
+
+
+  .offer-form{
+    
+    position: relative;
+    
+    .form-grid{
+
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+
+      .input-group{
+        position: relative;
+        width: 200px;
+
+        .dropdown{
+          width: 100%;
+          padding: 18px 20px;
+          border: 2px solid rgb(215, 230, 225);
+          border-radius: 12px;
+          background: rgb(246, 250, 249);
+          font-size: 16px;
+          font-weight: 500;
+          color: rgb(13, 107, 76);
+          cursor: pointer;
+          transition: all 0.3s ease;
+          appearance: none;
+          position: relative;
+        }
+
+        
+        .dropdown:hover{
+
+          border-color: rgb(126, 247, 208);
+          background: white;
+          transform: translateY(-2);
+          box-shadow: 0 8px 25px rgba(0, 212, 170, 0.15);
+        }
+
+        .dropdown:focus{
+          outline: none;
+          border-color: rgb(126, 247, 208);
+          background: white;
+          box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1);
+
+        }
+
+      }
+
+      .input-group::after{
+
+        content: '▼';
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgb(18, 179, 125);
+        pointer-events: none;
+        font-size: 12px;
+        transition: transform 0.3s ease;
+        
+      }
+
+      .input-group:hover::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    
+    .amount-input {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+            width: 70%;
+            
+
+
+        .amount-field{
+
+          width: 100%;
+          padding: 20px;
+          border: 2px solid rgb(215, 230, 225);
+          border-radius: 12px;
+          background: rgb(246, 250, 249);
+          font-size: 16px;
+          font-weight: 500;
+          color: rgb(13, 107, 76);
+          text-align: center;
+          transition: all 0.3s ease;
+          
+        }
+
+        .amount-field::placeholder {
+            color:  rgb(13, 107, 76);
+            font-weight: 400;
+        }
+
+        .amount-field:hover{
+          border-color: rgb(126, 247, 208);
+          background: white;
+          transform: translateY(-2);
+          box-shadow: 0 8px 25px rgba(0, 212, 170, 0.15);
+
+        }
+
+        .amount-field:focus {
+          outline: none;
+          border-color: rgb(126, 247, 208);
+          background: white;
+          box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1);
+        }
+        
+        }
+
+    .find-button{
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      padding: 18px 36px;
+      background: linear-gradient(135deg, rgb(69, 228, 141) 0%, rgb(5, 136, 81) 100%);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 212, 170, 0.3);
+      margin-top: 10px;
+    }
+    
+    .find-button::before{
+
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s ease;
+
+    }
+
+    .find-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 212, 170, 0.4);
+        }
+
+    .find-button:hover::before {
+            left: 100%;
+        }
+
+    .find-button:active {
+            transform: translateY(-10px);
+        }
+
+    }
+    
+  }
+
+  }
+
+  .why-zappr{
+  
+    background: transparent;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid white;
+    text-decoration: underline;
+    text-align: center;
+    padding: 18px 36px;
+    border-radius: 5cqmax;
+    margin-top: 32px;
+    position: absolute;
+    top: 700px;
+    cursor: pointer;
+  
+
+}
+
+.why-zappr:hover{
+  background: rgba(142, 250, 209, 0.2);
+}
+
+}
+
+/* Animation of Sparkle icon*/
+@keyframes sparkle {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2) rotate(180deg);
+                opacity: 0.8;
+            }
+        }
+
+
+/* This is various company section styling*/
+
+.companies{
+  width: 100%;
+  height: 350px;
+  background: #FDE24F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 2px solid black;
+
+  .heading3{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+
+
+}
+
+
+/* This is Features section styling */
+
+.features{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 80px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  height: 730px;
+  
+
+  .heading2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 100px;
+    margin-left: -1100px;
+    margin-bottom: 80px;
+    
+  }
+
+  .container-features{
+    
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    
+    
+
+
+    .escrow{
+      position: relative;
+      text-align: center;
+      width: 350px;
+
+      .logo-escrow{
+
+        margin: 24px;
+        width: 100px;
+      }
+
+      .secured{
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 24px;
+        color: rgb(2, 20, 14);
+      }
+
+      .para-escrow{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 32px;
+        color: #6e6e6e;
+      }
+
+      .learn{
+        font-size: 14px;
+        font-weight: 600;
+        color: rgb(2, 20, 14);
+      }
+    }
+
+    .newbie{
+      position: relative;
+      text-align: center;
+      width: 350px;
+
+      .logo-newbie{
+
+        margin: 24px;
+        width: 100px;
+      }
+
+      .newbie-friendly{
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 24px;
+        color: rgb(2, 20, 14);
+      }
+
+      .para-newbie{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 32px;
+        color: #6e6e6e;
+      }
+
+      .always-keep{
+        font-size: 14px;
+        font-weight: 600;
+        color:  rgb(2, 20, 14);
+      }
+    }
+
+    .payment{
+      position: relative;
+      text-align: center;
+      width: 350px;
+
+      .logo-payment{
+
+      margin: 24px;
+      width: 100px; 
+      }
+
+      .payment-methods{
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 24px;
+        color: rgb(2, 20, 14);
+      }
+
+      .para-payment{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 32px;
+        color: #6e6e6e;
+      }
+
+      .discover{
+        font-size: 14px;
+        font-weight: 600;
+        color: rgb(2, 20, 14);
+      }
+    }
+
+  }
+
+  .see-full{
+    
+    width: 300px;
+    padding: 18px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(2, 20, 14);
+    border: 2px solid rgb(2, 20, 14);
+    border-radius: 50px;
+    background: transparent;
+    outline: none;
+    margin-top: 100px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+
+  }
+
+
+.see-full:hover{
+
+  background: rgba(0, 212, 170, 0.1);
+  border-color: rgb(12, 187, 128);
+}
+
+}
+
+
+/* This is Buy/Sell section styling*/
+
+
+.buy-sell{
+
+  display: flex;
+  position: relative;
+  width: 100%;
+  background: #F8F8F8;
+  height: 800px;
+  gap: 600px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  .left{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    left: 235px;
+    justify-content: center;
+    
+
+  
+    
+    .buy{
+
+      font-size: 42px;
+      font-weight: 500;
+      color: rgb(2, 20, 14);
+      margin-bottom: 32px;
+    
+    }
+
+    .buy-1{
+
+        display: flex;
+        background: white;
+        border: 1px solid rgb(2, 20, 14);
+        align-items: center;
+        gap: 32px;
+        padding: 16px 32px;
+        border-radius: 24px;
+        margin-bottom: 32px;
+
+        & h4{
+          font-size: 18px;
+          font-weight: 500;
+        }
+  
+      }
+
+    .buy-2{
+
+        display: flex;
+        background: white;
+        border: 1px solid rgb(2, 20, 14);
+        align-items: center;
+        gap: 32px;
+        padding: 16px 32px;
+        border-radius: 24px;
+        margin-bottom: 32px;
+
+        & h4{
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+      }
+
+
+    .buy-3{
+
+        display: flex;
+        background: white;
+        border: 1px solid rgb(2, 20, 14);
+        align-items: center;
+        gap: 32px;
+        padding: 16px 32px;
+        border-radius: 24px;
+        margin-bottom: 64px;
+
+        & h4{
+          font-size: 18px;
+          font-weight: 500;
+          
+        }
+
+      }
+
+    .view-buy{
+
+      width: 220px;
+      padding: 16px 24px;
+      background: rgb(2, 20, 14);
+      outline: none;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 18px;
+      align-self: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      
+    }
+
+    .view-buy:hover{
+
+      background: rgb(5, 136, 81);
+
+    }
+
+
+    
+  }
+
+
+
+  .vertical {
+      border-left: 1px solid black;
+      height: 800px;
+      position:absolute;
+      left: 50%;
+    }
+
+
+
+  .right {
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    left: -130px;
+    justify-content: center;
+
+
+    .sell{
+
+      font-size: 42px;
+      font-weight: 500;
+      color: rgb(2, 20, 14);
+      margin-bottom: 32px;
+
+    }
+
+    .sell-1{
+
+        display: flex;
+        background: white;
+        border: 1px solid rgb(2, 20, 14);
+        align-items: center;
+        gap: 32px;
+        padding: 16px 32px;
+        border-radius: 24px;
+        margin-bottom: 32px;
+
+        & h4{
+          font-size: 18px;
+          font-weight: 500;
+        }
+  
+      }
+
+    .sell-2{
+
+        display: flex;
+        background: white;
+        border: 1px solid rgb(2, 20, 14);
+        align-items: center;
+        gap: 32px;
+        padding: 16px 32px;
+        border-radius: 24px;
+        margin-bottom: 32px;
+
+        & h4{
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+      }
+
+
+    .sell-3{
+
+        display: flex;
+        background: white;
+        border: 1px solid rgb(2, 20, 14);
+        align-items: center;
+        gap: 32px;
+        padding: 16px 32px;
+        border-radius: 24px;
+        margin-bottom: 64px;
+
+        & h4{
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+      }
+
+    .view-sell{
+
+      width: 220px;
+      padding: 16px 24px;
+      background: rgb(2, 20, 14);
+      outline: none;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 18px;
+      align-self: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      
+    }
+
+    .view-sell:hover{
+
+      background: rgb(5, 136, 81);
+
+    }
+
+  }
+
+}
+
+
+/* This is CTA section styling*/
+
+.cta{
+
+  background: #CFBAFF;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  position: relative;
+  
+
+  .elements{
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+    .sign-up{
+
+    font-size: 72px;
+    line-height: 88px;
+    font-weight: 500;
+    padding: 0 300px;
+    text-align: center;
+    margin: 100px 0;
+    
+    }
+    
+    .btn-cta{
+
+      width: 250px;
+      padding: 20px 24px;
+      background: rgb(2, 20, 14);
+      outline: none;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      border: none;
+      border-radius: 18px;
+      align-self: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-cta:hover{
+
+      background: rgb(5, 136, 81);
+    }
+
+
+  }
+}
+
+
+/* This is Footer section styling*/
+
+.footer{
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background: #020103;
+  gap: 40px;
+
+  .f-logo{
+    position: relative;
+    width: 137px;
+    height: 37px;
+    top: 120px;
+    left: 120px;
+
+  }
+
+  .f-items{
+    color: white;
+    display: flex;
+    align-self: center;
+    margin-top: 40px;
+    gap: 200px;
+
+    .product{
+
+      .f-title{
+
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .lists{
+
+      list-style: none;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .lists li{
+
+      margin-bottom: 16px;
+    }
+
+    }
+
+
+    .about-spacio{
+
+      .f-title{
+
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .lists{
+
+      list-style: none;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .lists li{
+
+      margin-bottom: 16px;
+    }
+
+    }
+
+
+
+    .support{
+    
+      .f-title{
+
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .lists{
+
+      list-style: none;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .lists li{
+
+      margin-bottom: 16px;
+    }
+
+    }
+
+  }
+
+  .h-line{
+    width: 100%;
+    margin-top: 72px;
+  }
+
+
+  .copyright{
+
+    display: flex;
+    position: relative;
+    width: 1400px;
+    align-self: center;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+
+  }
+}
