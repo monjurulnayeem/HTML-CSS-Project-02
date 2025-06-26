@@ -11,7 +11,8 @@ body{
   
 }
 
-/* Navigation Bar Styling*/ 
+/* Navigation Bar Styling*/         
+
 
 .navigation{
   display: flex;
@@ -93,6 +94,20 @@ body{
 
 .globe-icon img:hover{
   transform: scale(1.2);
+}
+
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #121212;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
 }
 
 }
@@ -341,6 +356,7 @@ body{
 }
 
 /* Animation of Sparkle icon*/
+
 @keyframes sparkle {
             0%, 100% {
                 transform: scale(1) rotate(0deg);
@@ -938,3 +954,406 @@ body{
 
   }
 }
+
+
+/* Responsive Design*/ 
+
+@media (max-width: 768px){
+
+
+
+.navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 20px;
+    position: relative;
+  }
+
+
+
+
+  .hero{
+    flex-direction: column;
+
+    .offer-container{
+
+    width: 320px;
+
+    .title{
+
+      font-size: 20px;
+
+      .sparkle{
+        font-size: 20px;
+      }
+    }
+
+    .offer-form{
+    
+    .form-grid{
+
+      .input-group{
+        width: 100%;
+      }
+
+      .amount-input{
+
+        width: 100%; 
+      }
+    }
+
+    }
+  }
+
+  .why-zappr{
+
+    top: 864px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 28px;
+  }
+  }
+
+
+
+.companies{
+  width: 100%;
+  height: 220px;
+  .heading3{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0;
+    
+  }
+
+  .logos{
+
+    width: 400px;
+  }
+}
+
+
+
+.features{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 720px;
+  
+  
+  .heading2{
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: 0;
+  
+  }
+
+
+  .container-features{
+
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+  
+  }
+}
+
+
+.buy-sell{
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 56px;
+  height: 1000px;
+
+  .left{
+    
+    left: 0;
+    
+
+    .buy{
+      position: relative;
+      font-size: 24px;
+      margin-top: 24px;
+      left: 28px;
+
+    }
+
+    .buy-1{
+      padding: 16px 24px;
+      gap: 10px;
+      width: 400px;
+      align-self: center;
+      margin-bottom: 16px;
+
+      .y-round{
+        width: 40px;
+      }
+
+      & h4{
+
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+
+    .buy-2 {
+      padding: 16px 24px;
+      gap: 10px;
+      width: 400px;
+      align-self: center;
+      margin-bottom: 16px;
+
+      .b-round{
+        width: 40px;
+      }
+
+      & h4{
+
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+
+    .buy-3 {
+      padding: 16px 24px;
+      gap: 10px;
+      width: 400px;
+      align-self: center;
+      margin-bottom: 40px;
+
+      .g-round{
+        width: 40px;
+      }
+
+      & h4{
+
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+  }
+
+
+.vertical{
+
+        border-left: none;
+        border-top: 1px solid black;  
+        width: 100%;                   
+        height: 1px;
+        top: 50%;                     
+        left: 0%;
+        
+    
+}
+
+
+.right{
+
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        left: 0;
+        justify-content: center;
+        
+        
+
+      .sell{
+      position: relative;
+      font-size: 24px;
+      margin-top: 40px;
+      left: 28px;
+      
+
+    }
+
+  .sell-1{
+      padding: 16px 24px;
+      gap: 10px;
+      width: 400px;
+      align-self: center;
+      margin-bottom: 16px;
+
+      .y-round{
+        width: 40px;
+      }
+
+      & h4{
+
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+
+    .sell-2 {
+      padding: 16px 24px;
+      gap: 10px;
+      width: 400px;
+      align-self: center;
+      margin-bottom: 16px;
+
+      .b-round{
+        width: 40px;
+      }
+
+      & h4{
+
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+
+    .sell-3 {
+      padding: 16px 24px;
+      gap: 10px;
+      width: 400px;
+      align-self: center;
+      margin-bottom: 40px;
+
+      .g-round{
+        width: 40px;
+      }
+
+      & h4{
+
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+}
+
+}
+
+.cta{
+
+    width: 100%;
+    height: 300px;
+
+    .elements{
+      
+      width: 100%;
+
+      .sign-up{
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px;
+        padding: 0 32px;
+        margin: 0;
+      }
+
+      .btn-cta{
+        
+        width: 220px;
+        margin-top: 40px;
+        padding: 16px 20px;
+      }
+
+    }
+
+}
+
+.footer{
+
+  width: 100%;
+  height: auto;
+  position: relative;
+  
+  
+
+  .f-logo{
+    
+    top: 80px;
+    left: 32px;
+    margin-bottom: 40px;
+    
+
+  }
+
+  .f-items{
+    
+    flex-direction: column;
+    align-self: flex-start;
+    padding-left: 32px;
+
+    gap: 24px;
+
+    .product{
+
+      
+    .f-title{
+
+      font-size: 18px;
+    }
+
+    .lists{
+
+      font-size: 14px;
+    }
+  }
+
+
+  .about-spacio{
+
+  
+
+    .f-title{
+
+      font-size: 18px;
+    }
+
+    .lists{
+
+      font-size: 14px;
+    }
+  }
+
+
+  .support{
+
+    
+
+    .f-title{
+
+      font-size: 18px;
+    }
+
+    .lists{
+
+      font-size: 14px;
+    }
+  }
+
+  }
+
+  .h-line{
+
+  margin-top: 32px;
+}
+
+
+.copyright{
+
+  width: 100%;
+  padding: 0 32px;
+  margin: 32px 0;
+}
+  
+}
+
+}
+  
+
+
+
+
